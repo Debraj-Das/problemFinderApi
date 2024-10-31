@@ -30,7 +30,7 @@ def fetchText(url):
     return text
 
 
-def getProblems(problemUrl):
+def getProblems():
     problems = [["Name", "URL", "Text"],]
     problemlist = requests.get(
         "https://kenkoooo.com/atcoder/resources/problems.json").json()
@@ -46,5 +46,4 @@ def getProblems(problemUrl):
 
 
 if __name__ == "__main__":
-    problemUrl = "https://atcoder.jp/contests"
-    getProblems(problemUrl)
+    getProblems()
